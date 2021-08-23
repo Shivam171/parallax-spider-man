@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Welcome | SpiderMan</title>
+</head>
+<body>
+    <div class="se-pre-con"></div>
+    
+    <audio id="myAudio" loop>
+        <source src="Parallax_Media/SpiderMan Homecoming Soundtrack.mp3" type="audio/mpeg">
+      </audio>
+
+    <section>
+        <img src="Parallax_Media/City.png" id="bg">
+        <img src="Parallax_Media/Ironman.png" id="ironman">
+        <img src="Parallax_Media/Marvel_Logo.png" id="logo">
+        <img src="Parallax_Media/Spidy.png" id="spidy">
+        <img src="Parallax_Media/Untitled-1.png" id="toggle">
+    </section>
+     
+    <!-- Row-1 -->
+    <div class="row1">
+        <div class="column left">
+            <h2 class="anim1">Story so far</h2>
+            <p class="anim1">Bitten by a radioactive spider, Peter Parker’s arachnid abilities give him amazing powers he uses it to help others, while his personal life continues to offer plenty of obstacles. With amazing spider-like abilities, teenage science whiz Peter Parker fights crime and dreams of becoming an Avenger as Spider-Man.</p>
+        </div>
+        <div class="column right">
+            <img src="Parallax_Media/giphydvsd.gif" width="400px" height="400px"> 
+        </div>
+    </div>
+
+    <!-- Row-2 -->
+    <div class="row2">
+        <div class="column2 left2">
+            <img src="Parallax_Media/Stark-and-Parker.jpg" id="gif2" width="550px" height="300px">
+        </div>
+        <div class="column2 right2">
+            <p class="anim2">In the aftermath of Captain America: Civil War (2016), the fifteen-year-old sophomore and Tony Stark's protégé, Peter Parker, finds himself back to his hometown of Queens, New York, trying to juggle high school and his super-hero alter-ego.<br><br>On pins and needles, waiting for his mentor to give him a chance to prove his mettle and become an official Avenger, instead, Stark, intent on protecting him, keeps Peter on a short leash, fearful that, one of these days, the boy may bite off more than he can chew.</p>
+        </div>
+    </div>
+
+    <!-- Row-3 -->
+    <div class="row3">
+        <div class="column3 left3">
+            <p class="anim3">Two months later, Peter is still waiting to hear back from Happy over any new missions. He goes back to being a normal student at Midtown High School. Peter makes plans with his best friend Ned (Jacob Batalon) to build a Lego Death Star. Peter also has a crush on a senior named Liz (Laura Harrier) and is frequently taunted by snotty rich kid Flash Thompson (Tony Revolori).
+        </div>
+        <div class="column3 right3">
+            <img src="Parallax_Media/jacob-batalon-spiderman-e1501637037823.jpg" id="gif3" width="500px" height="250px">
+        </div>
+    </div>
+
+    <!-- Row-4 -->
+    <div class="row4">
+        <div class="column4 left4">
+            <img src="Parallax_Media/webFluid.gif" id="gif4">
+        </div>
+        <div class="column4 right4">
+            <p class="anim4">When not at school, Peter continues going around the city as Spider-Man to help people as well as fight crime. Peter refers to his Spidey work as the Stark internship, and as a result, he quits his school's decathlon team. While at school, Peter secretly creates new web fluid for his shooters.</p>
+        </div>
+    </div>    
+
+    <!-- Row-5 Footer -->
+    <footer class="footer-distributed">
+        <div class="footer-right">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="footer-left">
+            <p class="footer-links">
+                <a class="link-1" href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </p>
+            <p>Made by Shivam Prakash &copy; All rights reserved 2021</p>
+        </div>
+    </footer>
+
+    <!-- Scripts :Do not touch -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script>
+    
+    // Animate loader off screen
+    $(document).ready(function (){
+    $(window).load(function(){
+		$(".se-pre-con").delay(3000).fadeOut("slow");;
+    });
+	});
+    
+    //Audio Playing
+    window.onload= function(){
+        document.getElementById("myAudio"). play();
+    }
+    var vid= document.getElementById("myAudio");
+    vid.volume = 0.1;
+
+    // Scroll Animation
+    gsap.to("#bg", {
+        scrollTrigger: {
+            scrub: 1
+        }, 
+        scale: 1.5
+    });
+
+    gsap.to("#spidy", {
+        scrollTrigger: {
+            scrub: 1.5
+        }, 
+        scale: 1.5
+    }); 
+
+    gsap.to("#logo", {
+        scrollTrigger: {
+            scrub: 1
+        }, 
+        y: 500
+    }); 
+
+    gsap.from("#toggle", {
+        scrollTrigger:  {
+            scrub: 1
+        }, 
+        x: -30
+    });
+    
+    gsap.to("#ironman", {
+        scrollTrigger: {
+            scrub: 1
+        },
+            y: 1500,
+            x: 200,
+            scale: 3
+        })
+    
+    // Row-1 Animation
+    gsap.to(".anim1", {
+        scrollTrigger: {
+            scrub: 1,
+            duration: 1
+        },
+        x: 30
+    })
+
+    // Row-2 Animation
+    gsap.to("#gif2",{
+        scrollTrigger: {
+            scrub: 1.5
+        },
+        x: 80
+    })
+
+    gsap.from(".anim2", {
+        scrollTrigger: {
+            scrub: 1.5,
+            duration: 1
+        },
+        x: 80
+    })
+
+    // Row-3 Animation
+    gsap.to(".anim3", {
+        scrollTrigger: {
+            scrub: 1.5,
+            duration: 1
+        },
+        x: 30
+    })
+
+    gsap.from("#gif3",{
+        scrollTrigger: {
+            scrub: 1.5
+        },
+        x: 30
+    })
+
+    // Row-4 Animation
+    gsap.to("#gif4",{
+        scrollTrigger: {
+            scrub: 1
+        },
+        x: 50
+    })
+
+    gsap.from(".anim4", {
+        scrollTrigger: {
+            scrub: 1.5,
+            duration: 1
+        },
+        x: 100
+    })
+    </script>
+
+</body> 
+</html>
