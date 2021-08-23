@@ -30,20 +30,6 @@ body::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(255,0,0,0.4); 
 }
 
-/* Page loader 
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100vh;
-	z-index: 9999;
-    object-fit: cover;
-	background: url(Parallax_Media/5510722.gif) center no-repeat #07173b;
-}
-*/
 section{
     position: relative;
     width: 100%;
